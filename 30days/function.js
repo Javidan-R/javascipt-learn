@@ -161,3 +161,79 @@ function bmiFormula(mass , height){
     } 
 }
 bmiFormula(70 , 1.8)
+
+function checkSeason(){
+    let month = [
+        "Yanvar" ,
+        "Fevral" ,
+        "Mart" ,
+        "Aprel" , 
+        "May" ,
+        "Iyun" ,
+        "Iyul" ,
+        "Avqust" ,
+        "Sentyabr" ,
+        "Oktyabr" ,
+        "Noyabr" ,
+        "Dekabr"
+    ]
+    let season = [
+        "Spring" ,
+        "Summer",
+        "Autumn" ,
+        "Winter" ,
+    ]
+     function monthIndex(n){
+        return month.indexOf(month[n])
+    }
+    function seasonIndex(x){
+        return month.indexOf(season[x])
+    }
+
+    if (monthIndex(2) <= month < monthIndex(5)) {
+        console.log('Season is ',season[0])
+    } else if(monthIndex(5) <= month < monthIndex(8)){
+        console.log('Season is ',season[1])
+    } else if(monthIndex(8) <= month < monthIndex(11)){
+        console.log('Season is ',season[2])
+    } else{
+        console.log('Season is ',season[3])
+    }
+}
+checkSeason()
+
+// arrow function
+const kube=n=>{
+    return n**3
+}
+console.log(kube(3))
+const square = x => x**2
+console.log(square(5))
+
+const changeUpperCase = arr=>{
+    const newArr = []
+    for (const element of arr) {
+        newArr.push(element.toUpperCase())
+    }
+    return newArr
+}
+
+const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+console.log(changeUpperCase(countries))
+ 
+const firstName = ['Javidan']
+const lastName = ['Rajabli']
+const printFullName = (firstName, lastName)=>`${changeUpperCase(firstName)} ${lastName}`
+
+console.log(printFullName(firstName, lastName))
+
+const sum = (...arr1)=>{
+   let newArr1 = []
+   for (let index = 0; index < arr1.length; index++) {
+   newArr1 += arr1[index]
+    
+   }
+   return  newArr1
+   
+}
+console.log(sum('Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland'))
