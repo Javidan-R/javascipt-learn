@@ -129,25 +129,25 @@ function addNumbers(num1, num2){
     return (num1 + num2)
 }
 console.log('iki ededin cemi: ' , addNumbers(12, 21))
-
+// 
 function  areaOfRectangle(length , width){
     let area = length * width
     return area
 }
 console.log('Erazi: ', areaOfRectangle(6 , 12))
-
+// 
 function perimeterOfRectangle(length , width){
     let perimert = 2 * (length + width)
     return perimert
 }
 console.log('Duzbucaqlinin perimetri ' , perimeterOfRectangle(7 , 14 ))
-
+// 
 function volumeOfRectPrism(length , width , height){
     let volume = length * width * height
     return volume
 }
 console.log('Ucbucagin sahesi ' ,volumeOfRectPrism( 11 , 10 , 9))
-
+// 
 function bmiFormula(mass , height){
     let bmi = Math.ceil(mass / ((height **2)))
     if (bmi <= 18.5) {
@@ -162,6 +162,26 @@ function bmiFormula(mass , height){
 }
 bmiFormula(70 , 1.8)
 
+let weight = +prompt("Cekninizi daxil edin")
+let height = +prompt("boyunuzu daxil edin")
+function calcBmi(weight , height){
+    let bmi  = ( weight / (height **2 )) *100
+    return  bmi.toFixed(3)*100
+}
+let saybmi = calcBmi(weight , height)
+if (saybmi <= 18.5) {
+    console.log(`sizin BMI indexiniz ${saybmi}-dir ve bu Underweight`)
+} else if(saybmi <25){
+    console.log(`sizin BMI indexiniz ${saybmi}-dir ve bu Normal weight`)
+} else if(saybmi <29.9){
+    console.log(`sizin BMI indexiniz ${saybmi}-dir ve bu Overweight`)
+}else if(saybmi >30){
+    console.log(`sizin BMI indexiniz ${saybmi}-dir ve bu Obese`)
+} else{
+    console.log('proqramda sazlamalar gedir')
+}
+
+// 
 function checkSeason(){
     let month = [
         "Yanvar" ,
@@ -209,7 +229,7 @@ const kube=n=>{
 console.log(kube(3))
 const square = x => x**2
 console.log(square(5))
-
+// 
 const changeUpperCase = arr=>{
     const newArr = []
     for (const element of arr) {
@@ -217,16 +237,16 @@ const changeUpperCase = arr=>{
     }
     return newArr
 }
-
+// 
 const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 console.log(changeUpperCase(countries))
- 
+//  
 const firstName = ['Javidan']
 const lastName = ['Rajabli']
 const printFullName = (firstName, lastName)=>`${changeUpperCase(firstName)} ${lastName}`
 
 console.log(printFullName(firstName, lastName))
-
+// 
 const sum = (...arr1)=>{
    let newArr1 = []
    for (let index = 0; index < arr1.length; index++) {
@@ -237,3 +257,29 @@ const sum = (...arr1)=>{
    
 }
 console.log(sum('Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland'))
+
+// 
+const formalMeet = (name, gender) => {
+ gender === 'm' ? console.log(`Mr.${name}`) : console.log(`Mr.${name}`)
+}
+formalMeet('Cavidan' ,'m')
+function checkSeason(month) {
+    if (month >= 3 && month <= 5) {
+        return "Spring"
+    } else  if(month >= 6 && month <= 8){
+        return "Summer"
+    }else  if(month >= 9 && month <= 11){
+        return "Autumn"
+    }else {
+        return "Winter"
+    } 
+}
+checkSeason(11)
+
+function findMax(a, b, c) {
+    let max = a;
+    if (b > max)  max = b;
+    if (c > max)  max = c;
+    return max;
+  }
+  console.log(findMax(212,34,-34))
