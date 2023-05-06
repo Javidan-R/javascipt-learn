@@ -74,9 +74,9 @@
 // console.log(sumArrayValues(numbers))
 
 // function sumArg() {
-//     let total = 0
-//     for (let i = 0; i < arguments.length; i++) {
-//         total += arguments[i];
+//     let total = 1
+//     for (let i = 1; i < arguments.length; i++) {
+//         total *= arguments[i];
 //     }
 //     return total
 // }
